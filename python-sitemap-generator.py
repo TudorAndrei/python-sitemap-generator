@@ -91,11 +91,11 @@ class RunCrawler(threading.Thread):
 
         while run:
             for index, thread in enumerate(threads):
-                if thread.isAlive() == False:
+                if thread.is_alive() == False:
                     del threads[index]
 
             for index, thread in enumerate(link_threads):
-                if thread.isAlive() == False:
+                if thread.is_alive() == False:
                     del link_threads[index]
 
             for index, obj in enumerate(queue):
